@@ -3,6 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_playground/constants.dart';
 import 'loading_screen.dart';
 import 'package:flutter_playground/components/icon_btn.dart';
+import 'package:flutter_playground/screens/mycard_screen.dart';
 
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({Key? key}) : super(key: key);
@@ -110,7 +111,7 @@ class DashboardScreen extends StatelessWidget {
                         ),
                         RoundIconButton(
                           icon: Icon(Icons.piano_outlined),
-                          label: '실로폰',
+                          label: '뭐하지',
                           passValue: () {
                             Navigator.push(
                               context,
@@ -162,8 +163,8 @@ class DashboardScreen extends StatelessWidget {
                           },
                         ),
                         RoundIconButton(
-                          icon: Icon(Icons.loop_outlined),
-                          label: '뭐하지',
+                          icon: Icon(Icons.audiotrack_sharp),
+                          label: '드럼킷',
                           passValue: () {
                             Navigator.push(
                               context,
@@ -176,7 +177,7 @@ class DashboardScreen extends StatelessWidget {
                           },
                         ),
                         RoundIconButton(
-                          icon: Icon(Icons.loop_outlined),
+                          icon: Icon(Icons.loop_sharp),
                           label: '뭐할까',
                           passValue: () {
                             Navigator.push(
@@ -190,14 +191,14 @@ class DashboardScreen extends StatelessWidget {
                           },
                         ),
                         RoundIconButton(
-                          icon: Icon(Icons.face_outlined),
+                          icon: Icon(Icons.face_sharp),
                           label: '만든이',
                           passValue: () {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
                                 builder: (context) {
-                                  return LoadingScreen();
+                                  return MyCard();
                                 },
                               ),
                             );
