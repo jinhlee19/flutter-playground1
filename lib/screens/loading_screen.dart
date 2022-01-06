@@ -13,7 +13,7 @@ class LoadingScreen extends StatelessWidget {
           child: Container(
             child: TextButton(
               child: Text(
-                '내 마음대로 만들어보기 \u{1f60e}',
+                'LOADING \u{1f60e}',
                 style: kDefault,
               ),
               onPressed: () {

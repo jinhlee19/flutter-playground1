@@ -67,17 +67,28 @@ class Dice extends StatelessWidget {
                 ],
               ),
             ),
-            TextButton(
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(Colors.black38),
-              ),
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              child: Text(
-                'Back to Dashboard',
-                style: kLabelTextStyleW,
-              ),
+            Column(
+              children: [
+                TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    'ROLL IT!!',
+                    style: kLabelTextStyleW,
+                  ),
+                ),
+                TextButton(
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(Colors.black38),
+                  ),
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: Text(
+                    'Back to Dashboard',
+                    style: kLabelTextStyleW,
+                  ),
+                ),
+              ],
             ),
           ],
         ),
