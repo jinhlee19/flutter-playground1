@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_playground/components/app_bar.dart';
 import 'package:flutter_playground/constants.dart';
+import 'package:flutter_playground/screens/dice.dart';
 import 'loading_screen.dart';
 import 'package:flutter_playground/components/icon_btn.dart';
 import 'package:flutter_playground/screens/mycard_screen.dart';
@@ -82,7 +84,7 @@ class DashboardScreen extends StatelessWidget {
                         //   ),
                         // ),
                         RoundIconButton(
-                          icon: Icon(Icons.auto_fix_high_outlined),
+                          icon: const Icon(Icons.auto_fix_high_outlined),
                           label: '데스티니',
                           passValue: () {
                             Navigator.push(
@@ -96,21 +98,21 @@ class DashboardScreen extends StatelessWidget {
                           },
                         ),
                         RoundIconButton(
-                          icon: Icon(Icons.casino_sharp),
-                          label: '블랙잭',
+                          icon: const Icon(Icons.casino_sharp),
+                          label: '주사위',
                           passValue: () {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
                                 builder: (context) {
-                                  return LoadingScreen();
+                                  return Dice();
                                 },
                               ),
                             );
                           },
                         ),
                         RoundIconButton(
-                          icon: Icon(Icons.piano_outlined),
+                          icon: const Icon(Icons.piano_outlined),
                           label: '뭐하지',
                           passValue: () {
                             Navigator.push(
@@ -124,7 +126,7 @@ class DashboardScreen extends StatelessWidget {
                           },
                         ),
                         RoundIconButton(
-                          icon: Icon(Icons.nature_people_outlined),
+                          icon: const Icon(Icons.nature_people_outlined),
                           label: '시작화면',
                           passValue: () {
                             Navigator.push(
@@ -149,7 +151,7 @@ class DashboardScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         RoundIconButton(
-                          icon: Icon(Icons.thermostat_outlined),
+                          icon: const Icon(Icons.thermostat_outlined),
                           label: '오늘온도',
                           passValue: () {
                             Navigator.push(
@@ -163,7 +165,7 @@ class DashboardScreen extends StatelessWidget {
                           },
                         ),
                         RoundIconButton(
-                          icon: Icon(Icons.audiotrack_sharp),
+                          icon: const Icon(Icons.audiotrack_sharp),
                           label: '드럼킷',
                           passValue: () {
                             Navigator.push(

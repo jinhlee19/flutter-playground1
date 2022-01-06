@@ -23,8 +23,6 @@ class RoundIconButton extends StatelessWidget {
           shape: CircleBorder(),
           fillColor: Colors.white,
           elevation: 6,
-          highlightColor: Colors.yellow,
-          splashColor: Colors.red,
         ),
         const SizedBox(height: 10),
         Text(label, style: kLabelTextStyle)
