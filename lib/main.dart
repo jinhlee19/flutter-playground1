@@ -6,7 +6,7 @@ import 'package:flutter_playground/screens/loading_screen.dart';
 void main() => runApp(
       const MaterialApp(
         home: Center(
-          child: DashboardScreen(),
+          child: LoadingScreen(),
         ),
       ),
     );
