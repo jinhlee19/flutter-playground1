@@ -3,6 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_playground/components/app_bar.dart';
 import 'package:flutter_playground/constants.dart';
 import 'package:flutter_playground/screens/dice.dart';
+import 'package:flutter_playground/screens/fairytale.dart';
 import 'package:flutter_playground/screens/piano_screen.dart';
 import 'loading_screen.dart';
 import 'package:flutter_playground/components/icon_btn.dart';
@@ -86,13 +87,13 @@ class DashboardScreen extends StatelessWidget {
                         // ),
                         RoundIconButton(
                           icon: const Icon(Icons.auto_fix_high_outlined),
-                          label: '데스티니',
+                          label: '동화책',
                           passValue: () {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
                                 builder: (context) {
-                                  return LoadingScreen();
+                                  return fairytale();
                                 },
                               ),
                             );
