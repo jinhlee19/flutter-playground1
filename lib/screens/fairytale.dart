@@ -59,7 +59,8 @@ class _FairyTaleState extends State<FairyTale> {
   int dokkiNumber = 1;
   // Todo 1 비어있는 리스트를 만들어줌으로써 넣을 수 있게 함.
   List<String> questions = ['이 금도끼가 니도끼냐', '은도끼가 니도끼냐', '쇠도끼가 니도끼냐'];
-  List<Icon> AnswerChecker = [];
+  List<bool> answers = [false, false, true];
+  List<Icon> answerChecker = [];
   int questionNumber = 0;
   @override
   Widget build(BuildContext context) {
@@ -87,12 +88,20 @@ class _FairyTaleState extends State<FairyTale> {
                     child: TextButton(
                       // Todo yes button
                       onPressed: () {
+                        // if에서 ==는 비교연산자**
+                        // 1번질문은 falue값이 if문에서 true를 리턴한다.
+                        bool correctAnswer = answers[questionNumber];
+                        if (correctAnswer == true) {
+                          print('right answer');
+                        } else {
+                          print('wrong answer');
+                        }
+
                         setState(() {
                           questionNumber++;
                           dokkiNumber++;
-                          print(questionNumber);
                         });
-                      },
+                      }, //
                       child: Text(
                         '네',
                         style: kLabelTextStyleW,
@@ -108,8 +117,18 @@ class _FairyTaleState extends State<FairyTale> {
                     decoration: BoxDecoration(border: Border.all(width: 1)),
                     child: TextButton(
                       onPressed: () {
-                        questionNumber++;
-                        print(questionNumber);
+                        // 답을 위에서 가져옴.
+                        bool correctAnswer = answers[questionNumber];
+
+                        if (correctAnswer == false) {
+                          print('right answer');
+                        } else {
+                          print('wrong answer');
+                        }
+                        setState(() {
+                          questionNumber++;
+                          dokkiNumber++;
+                        });
                       },
                       child: Text(
                         '아니오',
