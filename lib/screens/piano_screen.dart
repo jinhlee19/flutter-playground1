@@ -5,13 +5,13 @@ import 'package:audioplayers/audioplayers.dart';
 void main() => runApp(Piano());
 
 class Piano extends StatelessWidget {
-  // 보이드 함수의 점점점.
+  // 오디오플레이어 라이브러리 호출 -> player에 저장 -> 번호를 받는 플레이()메서드 생성 -> void 상태의 플레이어사운드 인스턴스로 내보내기.
   void playSound(int soundNumber) {
     final player = AudioCache();
     player.play('sound$soundNumber.mp3');
   }
 
-  //위젯을 데이터타입으로 사용하는 부분 주의
+  // 함수생성 위젯을 클래스(데이터타입)로 사용하는 3번째 타입의 함수 [input을 받아 return]
   Expanded buildKey({required Color color, required int soundNumber}) {
     return Expanded(
       child: Padding(

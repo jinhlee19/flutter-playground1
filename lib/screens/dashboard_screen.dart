@@ -93,7 +93,7 @@ class DashboardScreen extends StatelessWidget {
                               context,
                               MaterialPageRoute(
                                 builder: (context) {
-                                  return fairytale();
+                                  return StoryBoard();
                                 },
                               ),
                             );
