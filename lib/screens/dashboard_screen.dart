@@ -4,6 +4,7 @@ import 'package:flutter_playground/components/app_bar.dart';
 import 'package:flutter_playground/constants.dart';
 import 'package:flutter_playground/screens/dice.dart';
 import 'package:flutter_playground/screens/fairytale.dart';
+import 'package:flutter_playground/screens/invoice_gen.dart';
 import 'package:flutter_playground/screens/piano_screen.dart';
 import 'loading_screen.dart';
 import 'package:flutter_playground/components/icon_btn.dart';
@@ -175,13 +176,13 @@ class DashboardScreen extends StatelessWidget {
                         ),
                         RoundIconButton(
                           icon: Icon(Icons.loop_sharp),
-                          label: '뭐할까',
+                          label: '인보이스',
                           passValue: () {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
                                 builder: (context) {
-                                  return LoadingScreen();
+                                  return const InvoiceGen();
                                 },
                               ),
                             );

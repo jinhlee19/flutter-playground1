@@ -43,3 +43,24 @@ const kTitleTextStyleW = TextStyle(
   fontFamily: 'SAir',
   color: Colors.white,
 );
+const kOrderTitleStyle = TextStyle(
+  fontSize: 18.0,
+  letterSpacing: 0,
+  fontFamily: 'SBold',
+  fontWeight: FontWeight.bold,
+  color: Colors.black87,
+);
+const kOrderSubtitleStyle = TextStyle(
+  fontSize: 15.0,
+  fontFamily: 'SAir',
+  letterSpacing: 1,
+  fontWeight: FontWeight.bold,
+  color: Colors.black54,
+);
+
+const kItemBoldTextStyle = TextStyle(
+  fontSize: 16.0,
+  fontFamily: 'SAir',
+  fontWeight: FontWeight.bold,
+  color: Colors.black87,
+);
